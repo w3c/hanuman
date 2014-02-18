@@ -4,7 +4,8 @@
   "description": "Harvest data related to web-platform-tests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,12 @@
     "url": "https://github.com/w3c/hanuman/issues"
   },
   "dependencies": {
-	  "simple-github": "*",
-	  "express": "*"
+    "simple-github": "*",
+    "express": "*"
   },
-  "homepage": "https://github.com/w3c/hanuman"
+  "homepage": "https://github.com/w3c/hanuman",
+  "subdomain": "hanuman",
+  "engines": {
+    "node": "0.10.x"
+  }
 }
