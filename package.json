@@ -1,0 +1,28 @@
+{
+  "name": "Hanuman",
+  "version": "0.1.0",
+  "description": "Harvest data related to web-platform-tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:w3c/hanuman.git"
+  },
+  "keywords": [
+    "w3c",
+    "web-platform-tests",
+    "testing"
+  ],
+  "author": "Philippe Le Hégaret",
+  "license": "W3C Software License",
+  "bugs": {
+    "url": "https://github.com/w3c/hanuman/issues"
+  },
+  "dependencies": {
+	  "simple-github": "*",
+	  "express": "*"
+  },
+  "homepage": "https://github.com/w3c/hanuman"
+}
