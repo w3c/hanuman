@@ -20,7 +20,7 @@ var express = require("express"),
 
 var server = express();
 
-var issues = new Array();
+var issues;
 
 function updateIssues() {
      gh.request("GET /repos/:owner/:repo/issues?per_page=100&state=open").then(function (opens) {
@@ -31,7 +31,7 @@ function updateIssues() {
         });
         issues = new_issues;
         console.log((new Date()).toISOString(), "Updated with", issues.length + " github objects");
-      })
+      });
   });
 }
 
@@ -57,7 +57,7 @@ server.configure('production', function() {
 });
 
 server.get('/issues', function (req, res, next) {
-    res.send(issues);
+    res.jsonp(issues);
 });
 
 var port = process.env.PORT || 8000;
