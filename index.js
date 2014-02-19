@@ -30,7 +30,7 @@ function updateIssues() {
             return a.number - b.number;
         });
         issues = new_issues;
-        console.log((new Date()).toISOString(), "Updated with", issues.length + " github objects");
+        console.log("Updated with", issues.length + " github objects");
       });
   });
 }
