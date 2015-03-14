@@ -9,7 +9,11 @@
 
  [1] http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231
 */
-var io = require('./io-promise');
+var io = require('./io-promise'),
+    gh = require("simple-github")({
+        owner: "w3c",
+        repo: "web-platform-tests"
+    });
 
 var ISSUES_FILENAME = "/tmp/issues.json";
 

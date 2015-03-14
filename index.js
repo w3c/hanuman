@@ -13,10 +13,6 @@
 */
 var express = require("express"),
     issues = require("./issues"),
-    gh = require("simple-github")({
-        owner: "w3c",
-        repo: "web-platform-tests"
-    }),
     compression = require('compression'),
     errorhandler = require('errorhandler'),
     morgan = require('morgan');
