@@ -22,12 +22,13 @@
     "url": "https://github.com/w3c/hanuman/issues"
   },
   "dependencies": {
-    "simple-github": "*",
-    "express": "*"
+    "compress": "^0.99.0",
+    "express": "*",
+    "simple-github": "*"
   },
   "homepage": "https://github.com/w3c/hanuman",
   "subdomain": "hanuman",
   "engines": {
-    "node": "0.10.x"
+    "node": "0.12.x"
   }
 }
