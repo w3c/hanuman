@@ -1,6 +1,6 @@
 {
   "name": "Hanuman",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Harvest data related to web-platform-tests",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,11 @@
     "url": "https://github.com/w3c/hanuman/issues"
   },
   "dependencies": {
-    "compression": "^1.4.2",
-    "express": "*",
+    "compression": "1.*.*",
+    "errorhandler": "1.*.*",
+    "es6-promise": "2.*.*",
+    "express": "0.4.*",
+    "morgan": "1.*.*",
     "simple-github": "*"
   },
   "homepage": "https://github.com/w3c/hanuman",
