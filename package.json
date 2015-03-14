@@ -22,7 +22,7 @@
     "url": "https://github.com/w3c/hanuman/issues"
   },
   "dependencies": {
-    "compress": "^0.99.0",
+    "compression": "^1.4.2",
     "express": "*",
     "simple-github": "*"
   },
