@@ -24,8 +24,7 @@ function Response(options) {
     return Promise.resolve(this.data);
   };
   this.json = function () {
-    var p = this.text().then(JSON.parse);
-    return p;
+    return this.text().then(JSON.parse);
   };
 }
 
