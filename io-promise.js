@@ -19,12 +19,14 @@ var io_promise = {};
 function Response(options) {
   this.status = options.status;
   this.url    = options.url;
-  function text() {
-    return Promise.resolve(options.data);
-  }
-  function json() {
-    return text().then(JSON.parse);
-  }
+  this.data   = options.data;
+  this.text = function () {
+    return Promise.resolve(this.data);
+  };
+  this.json = function () {
+    var p = this.text().then(JSON.parse);
+    return p;
+  };
 }
 
 io_promise.fetch = function (url) {
@@ -35,7 +37,7 @@ io_promise.fetch = function (url) {
       res.on('data', function (chunk) {
         buffer += chunk;
       });
-      res.on('end', function (chunk) {
+      res.on('end', function () {
         if (res.statusCode >= 200 && res.statusCode < 300) {
           resolve(new Response({ status: res.statusCode,
                                  url: res.url,
