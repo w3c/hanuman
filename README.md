@@ -1,12 +1,11 @@
-Hanuman
-=======
+# Hanuman
 
-Harvest data related to web-platform-tests
+Harvest data related to web-platform-tests.
+
+Used by [`testthewebforward.org/dashboard`](http://testthewebforward.org/dashboard/).
+
+## Installation
 
 ```
-npm install express
-npm install simple-github
+npm install
 ```
-
-Used by
-  http://testthewebforward.org/dashboard/
