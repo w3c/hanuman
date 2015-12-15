@@ -24,7 +24,7 @@
   "dependencies": {
     "compression": "1.*.*",
     "errorhandler": "1.*.*",
-    "es6-promise": "^2.3.0",
+    "es6-promise": "3.*.*",
     "express": "4.*.*",
     "morgan": "1.*.*",
     "simple-github": "*"

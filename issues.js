@@ -21,7 +21,9 @@ var issues = {};
 
 var data = [];
 
-io.readJSON(ISSUES_FILENAME).then(function (obj) {
+io.read(ISSUES_FILENAME).then(function (res) {
+  return res.json();
+}).then(function (obj) {
   data = obj;
   console.log("Loaded %d issues from %s", data.length, ISSUES_FILENAME);
 }).catch(function (err) {
@@ -41,7 +43,8 @@ function fetchIssues() {
       return a.number - b.number;
     });
     data = new_issues;
-    return io.saveJSON(ISSUES_FILENAME, data);
+    return io.save(ISSUES_FILENAME, data)
+      .then(function () { return data;});
   });
 }
 
